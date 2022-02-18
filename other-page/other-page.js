@@ -3,7 +3,7 @@ import { renderItem } from '../render-utils.js';
 
 checkAuth();
 
-const itemForm = document.querySelector('.item-form');
+const itemForm = document.getElementById('item-form');
 const deleteButton = document.querySelector('.delete-button');
 const logoutButton = document.getElementById('logout');
 
@@ -30,9 +30,10 @@ itemForm.addEventListener('submit', async (e) => {
     
     const itemData = new FormData(itemForm);
     const item = itemData.get('items');
- 
+    console.log(item, 'testing');
     await createItem(item);
     renderItems();
+    //itemForm.reset();
      
 });
 
