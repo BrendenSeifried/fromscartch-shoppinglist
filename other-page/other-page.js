@@ -12,10 +12,10 @@ async function renderItems() {
     derp.textContent = '';
     const items = await getItems();
     for (let item of items) {
-        const li = renderItem(item);
+        const li = await renderItem(item);
         li.addEventListener('click', async () => {
             await completeItem(item.id);
-            renderItems();
+            await renderItems();
         });
         derp.append(li);
     }
@@ -26,14 +26,15 @@ renderItems();
 
 
 itemForm.addEventListener('submit', async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     
     const itemData = new FormData(itemForm);
+    console.log(itemData, 'othertest');
     const item = itemData.get('items');
     console.log(item, 'testing');
     await createItem(item);
-    renderItems();
-    //itemForm.reset();
+    await renderItems();
+   // itemForm.reset();
      
 });
 
