@@ -29,7 +29,7 @@ itemForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
     const itemData = new FormData(itemForm);
-    console.log(itemData, 'othertest');
+    //console.log(itemData, 'othertest');
     const item = itemData.get('items');
     console.log(item, 'testing');
     await createItem(item);
