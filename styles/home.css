@@ -1,1 +1,5 @@
 /* add home page styles here */
+.complete {
+    text-decoration: line-through;
+    background-color: lightgreen;
+}
