@@ -42,8 +42,14 @@ export async function completeItem(id) {
     return checkError(response);
 }
 
-export async function createItem(grocerie) {
-    const response = await client.from('groceries').insert({ description: grocerie, complete: false, user_id: client.auth.user().id });
+export async function getItems() {
+    const response = await client.from('groceries').select().order('id');
+    console.log(response);
+    return checkError(response);
+}
+
+export async function createItem(item) {
+    const response = await client.from('groceries').insert({ description: item, complete: false, user_id: client.auth.user().id });
     console.log(response, 'testing');
     return checkError(response);
 }
