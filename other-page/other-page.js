@@ -34,7 +34,7 @@ itemForm.addEventListener('submit', async (e) => {
     console.log(item, 'testing');
     await createItem(item);
     await renderItems();
-   // itemForm.reset();
+    itemForm.reset();
      
 });
 
