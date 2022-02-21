@@ -1,1 +1,9 @@
 /* add home page styles here */
+.complete {
+    text-decoration: line-through;
+    background-color: lightgreen;
+}
+
+.test1{
+    background-color: aliceblue;
+}

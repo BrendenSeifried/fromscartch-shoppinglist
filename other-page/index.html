@@ -16,12 +16,24 @@
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="../assets/big-logo.png" />
+            <!-- <img src="../assets/big-logo.png" /> -->
+            <h1>Your shopping list.</h1>
         </div>
     </header>    
     <button id="logout">Logout</button>
     <main>
-        <h1>You are logged in!</h1>
+            <h1>Your groceries, click item when bought to cross out.</h1>
+        <form id="item-form">
+            Items
+            <input name="items" required />
+            <!-- Amount
+            <input type="number" name="amount" id="amount"/> -->
+            <button>Add groceries</button>
+            
+        </form>
+        <ul id="listing"></ul>
+        <button class="delete-button">Clear all items.</button>
+            
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
